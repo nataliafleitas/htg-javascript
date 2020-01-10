@@ -50,9 +50,7 @@ main {
   font-weight: bold;
 }
 
-.comment--text {
-  font-weight: ;
-}
+
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -61,4 +59,7 @@ main {
     --bg-color: #222;
     --font-color: #AAA;
   }
+}
+.comment--text{
+  background-color: rgb(240, 183, 202);
 }
