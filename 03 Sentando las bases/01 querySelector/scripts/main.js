@@ -10,4 +10,9 @@ const borde = document.querySelectorAll('hr');
 for(let i=0; i < borde.length;i++){
     borde[i].style.borderColor= "red";
 };
-
+const comentarios = document.querySelector('.coment--nuevo');
+for(let i=0; i < comentarios.length;i++){
+    if(comentarios[i].textContent.length > 50){
+        comentarios[i].classList.add('comment-hidden');
+    }
+}
