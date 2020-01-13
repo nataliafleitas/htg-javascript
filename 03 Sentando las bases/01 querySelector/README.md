@@ -35,3 +35,11 @@ Usar el método `.querySelector` para resaltar visualmente el comentario que má
 ### Ejercicio 2
 
 Seleccionar todos los elementos `hr` usando JavaScript y asignarle una clase que le asigne un estilo personalizado. El estilo puede ser cualquiera.
+
+### Ejercicio 3
+
+Ocultar los comentarios de más de 50 caracteres
+
+### Ejercicio 4
+
+Ocultar el comentario más largo.
