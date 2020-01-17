@@ -4,19 +4,28 @@ const formulario = document.querySelector('#contacto');
 const inputNombre = document.querySelector('#input-nombre');
 const mensaje = document.querySelector('.mensaje');
 const inputSolucion = document.querySelector('#input-solucion');
-const comentario = document.querySelector('.comentario');
+const comentario = document.querySelector('.comentarios');
+const enviado = document.querySelector('.enviado');
 
 function recibirNombre(event) {
+  let comentarios = document.createElement('p');
   console.log('hola');
-  comentario.textContent = inputNombre.value+' '+' '+  inputSolucion.value;
   event.preventDefault();
-  //formulario.textContent = 'Se envio los datos'; ESTO LO QUE HACIA ERA TRANSFORMAR
-  EL CAMPO INPUT EN TextDecoder, ENTONCES DESAPARECIA EL CAMPO.
-  //formulario.style.color = 'blue';
+  enviado.innerText = 'El formulario se ah enviado correctamente';
+  enviado.style.color = 'red';
 
+  comentarios.textContent = inputNombre.value+' '+' '+  inputSolucion.value;
+  comentario.appendChild(comentarios);
+
+  setTimeout(function(){enviado.innerText = null}, 3000); //oculta el mensaje por determinado tiempo
+
+  inputNombre.value ='';
+  inputSolucion.value='';
+ 
   
 
 }
+
 
 
 function interceptarNombre(event) {
@@ -31,9 +40,14 @@ function interceptarNombre(event) {
 
     }  
 }
+function borrarNombre(){
+  enviado.style.display = 'none';
+  mensaje.style.display  = 'none';
+  
+}
 
 formulario.addEventListener('submit', recibirNombre);
 inputNombre.addEventListener('input', interceptarNombre);
-mensaje.addEventListener('span', interceptarNombre); //No es necesario ponerlo, aca digo que es un evento "span"
+
 
 
